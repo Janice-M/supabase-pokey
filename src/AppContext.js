@@ -8,3 +8,9 @@ const initialState = {
     isEditing: false,
     isLoggedIN: false,
 }
+
+const AppContext = createContext(initialState)
+
+export const AppContextProvider = ({children}) => {
+    const [state, dispatch] = useReducer (AppReducer, initialState);
+}
